@@ -17,6 +17,7 @@ public class ITestListenerImpl extends PredefinedActions implements ITestListene
 
     public void onTestSuccess(ITestResult result) {
         System.out.println("Test has succeeded for testcase:" + result.getName());
+        closeBrowser();
     }
 
     public void onTestFailure(ITestResult result) {
@@ -34,6 +35,7 @@ public class ITestListenerImpl extends PredefinedActions implements ITestListene
 
     public void onTestFailedWithTimeout(ITestResult result) {
         this.onTestFailure(result);
+        closeBrowser();
     }
 
     public void onStart(ITestContext context) {
@@ -42,6 +44,5 @@ public class ITestListenerImpl extends PredefinedActions implements ITestListene
 
     public void onFinish(ITestContext context) {
         System.out.println("Test has finished for testcase:" + context.getName());
-        closeBrowser();
     }
 }

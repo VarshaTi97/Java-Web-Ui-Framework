@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="base.ITestListenerImpl"/>
+  </listeners>
+  <test thread-count="5" name="demoTest(failed)" verbose="0">
+    <classes>
+      <class name="base.LaunchPageTest">
+        <methods>
+          <include name="Verify_LoginData_With_Standard_User"/>
+          <include name="Verify_LoginData_With_Locked_Out_User"/>
+          <include name="getBrowserName"/>
+          <include name="Verify_LoginData_With_Empty_Username"/>
+        </methods>
+      </class> <!-- base.LaunchPageTest -->
+      <class name="base.TestBase">
+        <methods>
+          <include name="getBrowserName"/>
+        </methods>
+      </class> <!-- base.TestBase -->
+    </classes>
+  </test> <!-- demoTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

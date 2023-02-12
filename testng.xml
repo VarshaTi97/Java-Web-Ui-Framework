@@ -5,6 +5,7 @@
         <listener class-name='base.ITestListenerImpl'/>
     </listeners>
     <test name="demoTest">
+<!--        <parameter name="browserName" value="${browserName}" />-->
         <classes>
             <class name="base.TestBase"/>
             <class name="base.LaunchPageTest"/>

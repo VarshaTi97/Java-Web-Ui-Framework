@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -29,14 +30,17 @@ public class PredefinedActions {
         switch(browser.toUpperCase()){
             case "CHROME":
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.setHeadless(true);
+//                System.setProperty("webdriver.chrome.driver","/Users/varsha.tiwari/PycharmProjects/RobotFrameworkPractice/chromedriver_mac64/chromedriver");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "IE" :
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
                 driver.manage().window().maximize();
             case "FIREFOX":
-                WebDriverManager.iedriver().setup();
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 driver.manage().window().maximize();
             case "SAFARI":
@@ -254,5 +258,12 @@ public class PredefinedActions {
 
     public void closeBrowser(){
         driver.quit();
+    }
+
+    public String replaceTextInLocator(String locator, String text){
+        locator = locator.replace("%s", text);
+        System.out.println(locator);
+        return locator;
+
     }
 }

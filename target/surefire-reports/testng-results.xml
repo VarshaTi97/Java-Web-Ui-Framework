@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-12T07:36:53 IST" name="Suite" finished-at="2023-02-12T07:37:05 IST" duration-ms="11190">
+    <groups>
+    </groups>
+    <test started-at="2023-02-12T07:36:53 IST" name="demoTest" finished-at="2023-02-12T07:37:05 IST" duration-ms="11190">
+      <class name="base.LaunchPageTest">
+        <test-method signature="Verify_LoginData_With_Empty_Username(java.lang.String,java.lang.String)[pri:0, instance:base.LaunchPageTest@550ee7e5]" started-at="2023-02-12T07:36:54 IST" name="Verify_LoginData_With_Empty_Username" data-provider="getDataFromExcel" finished-at="2023-02-12T07:37:00 IST" duration-ms="6353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_LoginData_With_Empty_Username -->
+        <test-method signature="Verify_LoginData_With_Locked_Out_User(java.lang.String,java.lang.String)[pri:0, instance:base.LaunchPageTest@550ee7e5]" started-at="2023-02-12T07:37:01 IST" name="Verify_LoginData_With_Locked_Out_User" data-provider="getDataFromExcel" finished-at="2023-02-12T07:37:02 IST" duration-ms="1962" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_LoginData_With_Locked_Out_User -->
+        <test-method signature="Verify_LoginData_With_Standard_User(java.lang.String,java.lang.String)[pri:0, instance:base.LaunchPageTest@550ee7e5]" started-at="2023-02-12T07:37:03 IST" name="Verify_LoginData_With_Standard_User" data-provider="getDataFromExcel" finished-at="2023-02-12T07:37:04 IST" duration-ms="1869" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_LoginData_With_Standard_User -->
+      </class> <!-- base.LaunchPageTest -->
+    </test> <!-- demoTest -->
+  </suite> <!-- Suite -->
+</testng-results>
