@@ -4,17 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh mvn clean
+            }
+        }
+        stage('Compile') {
+            steps {
+                sh mvn compile
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh mvn test
             }
         }
-        stage('Deploy') {
+        stage('Release'){
             steps {
-                echo 'Deploying....'
+                sh mvn deploy
             }
         }
     }
